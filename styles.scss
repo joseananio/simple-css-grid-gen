@@ -46,11 +46,12 @@ $screen-sizes: (
     margin-left: $margin;
     margin-right: $margin;
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     position: relative;
     box-sizing: border-box;
-
+    overflow: visible;
 }
 
 // create a new column from this template
@@ -100,9 +101,9 @@ $screen-sizes: (
 
     @each $size-name,$size in $screen-sizes{
         @media(min-width:$size){
-            [class^=#{$size-name}]{
-                @include make-column($size-name);
-            }
+            // [class^=#{$size-name}]{
+            //     @include make-column($size-name);
+            // }
             @each $column in $columns {
                 @include generate-col-classes($size-name,$column);
             }

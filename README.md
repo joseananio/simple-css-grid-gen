@@ -1,22 +1,28 @@
 #Simple CSS Grid Generator.
 
+This is not meant to be a full stack like Bootstrap grid and other, but to provide a quick and simple grid to add in your project if you only need quick grids that are responsive.
+
+Bootstrap has more functionality than this and it is recommended if you wat a full stack grid.
+
 ## Usage
 
 ```html
-<div class="row">
+<div>
+    <div class="row">
         <div class="sm-2 md-6 lg-10 a">this is so simple</div>
         <div class="sm-10 md-6 lg-2 b">And fun</div>
-      </div>
-      <div class="row">
-          <div class="c">full width column</div>    
-          <div class="a">Another full width column</div>    
-      </div>
+    </div>
+    <div class="row">
+        <div class="c">full width column</div>    
+        <div class="a">Another full width column</div>    
+    </div>
 
-      <div class="row">
+    <div class="row">
         <div class="sm-2 md-4 lg-3 e">this is so simple</div>
         <div class="sm-5 md-4 lg-2 d">And fun</div>
         <div class="sm-5 md-4 lg-7 c">And fun</div>
-      </div> 
+    </div>
+</div>
 ```
 ```css
 /* sample css*/
@@ -53,11 +59,11 @@
 
  - Uses `.row` to create a horizontal row, and then goes straight to column classes. No need to add `.col` class or prefix.
 
- - Each `div` inside a `.row` element is automatically considered to be a column.
+ - Each `div` directly inside a `.row` element is automatically considered to be a column.
 
- - Uses box-sizing border-box and no margins on rows and columns.
+ - Uses box-sizing: border-box and no margins on rows and columns.
 
-- Output is 5kB uncompressed.
+- Output is about 5kB uncompressed.
 
 ## Dev
 
